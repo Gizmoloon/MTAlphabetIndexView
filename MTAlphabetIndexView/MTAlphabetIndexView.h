@@ -11,13 +11,16 @@
 @protocol MTAlphabetIndexViewDelegate;
 
 @interface MTAlphabetIndexView : UIView
-
+{
+    UIButton *button;
+}
 @property (nonatomic, assign) id<MTAlphabetIndexViewDelegate> delegate;
 
 - (NSString *)alphabetAtIndex:(NSInteger)index;
 - (void)setIndex:(NSInteger)index enabled:(BOOL)enabled;
 - (void)setEnabledIndexes:(NSArray *)indexes;
 - (void)show;
+- (void)hide;
 
 @end
 
